@@ -1,4 +1,4 @@
 export const environment = {
-  production: true,
-  hostUrl: 'https://woodstock.cyclic.cloud',
+    production: false,
+    hostUrl: 'http://localhost:3000'
 };

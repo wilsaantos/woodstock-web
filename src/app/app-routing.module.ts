@@ -34,6 +34,18 @@ const routes: Routes = [
     canActivate: [authGuard],
   },
   {
+    path: 'gado',
+    loadChildren: () =>
+      import('./pages/cattle/cattle.module').then((m) => m.CattleModule),
+    canActivate: [authGuard],
+  },
+  {
+    path: 'madeira',
+    loadChildren: () =>
+      import('./pages/wood/wood.module').then((m) => m.WoodModule),
+    canActivate: [authGuard],
+  },
+  {
     path: '**',
     redirectTo: 'dahsboard',
   },
