@@ -37,7 +37,17 @@ export class SideBarComponent {
     {
       label: 'Fornecedores',
       route: '/fornecedores',
-      icon: 'outpatient',
+      icon: 'room_service',
+    },
+    {
+      label: 'Madeira',
+      route: '/madeira',
+      icon: 'forest',
+    },
+    {
+      label: 'Gado',
+      route: '/gado',
+      icon: 'pets',
     },
   ];
 
