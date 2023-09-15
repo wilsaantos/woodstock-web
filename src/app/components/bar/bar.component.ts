@@ -6,7 +6,7 @@ import { BarService } from 'src/app/services/bar.service';
   templateUrl: './bar.component.html',
   styleUrls: ['./bar.component.scss'],
 })
-export class BarComponent implements OnInit, OnDestroy {
+export class BarComponent implements OnInit {
   displayTopBar: boolean = true;
   displaySideBar: boolean = false;
 
@@ -28,14 +28,14 @@ export class BarComponent implements OnInit, OnDestroy {
     });
   }
 
-  displayUnsubscriber() {
+  /* displayUnsubscriber() {
     this.barService.displaySideBarEmitter.unsubscribe();
     this.barService.displayTopBarEmitter.unsubscribe();
   }
 
   ngOnDestroy(): void {
     this.displayUnsubscriber();
-  }
+  } */
 
   showSideBar(event: boolean) {
     this.barService.displaySideBarEmitter.emit(event);

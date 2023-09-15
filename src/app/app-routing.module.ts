@@ -18,6 +18,22 @@ const routes: Routes = [
     canActivate: [authGuard],
   },
   {
+    path: 'clientes',
+    loadChildren: () =>
+      import('./pages/customers/customers.module').then(
+        (m) => m.CustomersModule
+      ),
+    canActivate: [authGuard],
+  },
+  {
+    path: 'fornecedores',
+    loadChildren: () =>
+      import('./pages/providers/providers.module').then(
+        (m) => m.ProvidersModule
+      ),
+    canActivate: [authGuard],
+  },
+  {
     path: '**',
     redirectTo: 'dahsboard',
   },

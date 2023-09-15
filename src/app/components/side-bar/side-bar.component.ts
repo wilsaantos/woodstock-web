@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-bar',
@@ -25,8 +26,18 @@ export class SideBarComponent {
   menuItems: any[] = [
     {
       label: 'Finanças',
-      route: 'financas',
+      route: '/financas',
       icon: 'payments',
+    },
+    {
+      label: 'Clientes',
+      route: '/clientes',
+      icon: 'group',
+    },
+    {
+      label: 'Fornecedores',
+      route: '/fornecedores',
+      icon: 'outpatient',
     },
   ];
 
