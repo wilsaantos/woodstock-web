@@ -1,0 +1,21 @@
+<mat-toolbar *ngIf="display" [@enterAnimation]>
+  <div>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+      (click)="showSideBar()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+  <div class="avatar-button" [matMenuTriggerFor]="menu">
+    <mat-icon style="vertical-align: middle">person</mat-icon>
+    <span class="avatar-name">Administrador</span>
+  </div>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Perfil</button>
+    <button mat-menu-item (click)="logOut()">Sair</button>
+  </mat-menu>
+</mat-toolbar>

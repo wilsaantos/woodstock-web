@@ -1,0 +1,63 @@
+.card-login {
+  width: 600px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 20px 0;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-8 {
+  width: 80%;
+}
+
+.link-custom {
+  color: rgb(0, 100, 250);
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  margin-top: 10px;
+}
+.link-custom:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.teste {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+:host ::ng-deep {
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: white;
+  }
+  .mdc-text-field--filled:not(.mdc-text-field--enabled):hover {
+    background-color: white;
+  }
+  .mdc-text-field--filled:not(.mdc-text-field--enabled):focus {
+    background-color: white;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}

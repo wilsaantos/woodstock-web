@@ -1,0 +1,128 @@
+<div class="container">
+  <mat-card class="card-login" mat-align-tabs="center">
+    <mat-tab-group>
+      <mat-tab label="Acesse sua conta">
+        <div class="card-content">
+          <form class="w-8" [formGroup]="loginRequestForm">
+            <mat-form-field class="w-full">
+              <mat-label>Email ou Usuário</mat-label>
+              <input type="text" matInput formControlName="input" />
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+              <mat-label>Senha</mat-label>
+              <input
+                matInput
+                [type]="hidePassword ? 'password' : 'text'"
+                formControlName="password"
+              />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="hidePassword = !hidePassword"
+              >
+                <mat-icon>{{
+                  hidePassword ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+            </mat-form-field>
+
+            <button
+              mat-raised-button
+              color="primary"
+              class="w-full"
+              (click)="login()"
+              [disabled]="loginRequestForm.invalid"
+            >
+              Entrar
+            </button>
+
+            <div class="w-full">
+              <span class="link-custom" routerLink="">Esqueceu sua senha?</span>
+            </div>
+          </form>
+        </div>
+      </mat-tab>
+      <mat-tab label="Criar sua conta">
+        <div class="card-content">
+          <form class="w-8" [formGroup]="registerForm">
+            <mat-form-field class="w-full">
+              <mat-label>Nome Completo</mat-label>
+              <input
+                type="text"
+                matInput
+                placeholder="Nome *"
+                formControlName="name"
+              />
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+              <mat-label>Usuário</mat-label>
+              <input
+                type="text"
+                matInput
+                placeholder="Usuário *"
+                formControlName="nickname"
+              />
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput placeholder="Ex. pat@example.com" />
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+              <mat-label>Enter your password</mat-label>
+              <input
+                matInput
+                [type]="hidePassword ? 'password' : 'text'"
+                formControlName="password"
+              />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="hidePassword = !hidePassword"
+              >
+                <mat-icon>{{
+                  hidePassword ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+            </mat-form-field>
+
+            <!-- <mat-form-field class="w-full">
+              <mat-label>Confirm your password*</mat-label>
+              <input
+                matInput
+                [type]="hideConfirmePassword ? 'password' : 'text'"
+              />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="hideConfirmePassword = !hideConfirmePassword"
+              >
+                <mat-icon>{{
+                  hideConfirmePassword ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+            </mat-form-field> -->
+
+            <mat-form-field class="w-full">
+              <mat-label>Celular</mat-label>
+              <input type="tel" matInput placeholder="(00) 0 0000-0000" />
+            </mat-form-field>
+
+            <button
+              mat-raised-button
+              color="primary"
+              class="w-full"
+              (click)="register()"
+              [disabled]="registerForm.invalid"
+            >
+              Registrar
+            </button>
+          </form>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>

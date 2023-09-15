@@ -1,0 +1,8 @@
+<app-top-bar
+  [display]="displayTopBar"
+  (atSideBarClick)="showSideBar($event)"
+></app-top-bar>
+<app-side-bar
+  [display]="displaySideBar"
+  (atTopBarClick)="showTopBar($event)"
+></app-side-bar>

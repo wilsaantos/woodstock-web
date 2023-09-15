@@ -1,0 +1,24 @@
+mat-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(14, 194, 14);
+    color: white;
+    //padding: 0 0 0 4px;
+}
+
+.avatar-button {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.avatar-button:hover {
+  background-color: rgb(13, 175, 13);
+  transition: all ease 400ms;
+  cursor: pointer;
+}

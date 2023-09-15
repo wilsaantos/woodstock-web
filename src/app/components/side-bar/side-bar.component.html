@@ -1,0 +1,34 @@
+<mat-sidenav-container
+  class="example-container"
+  *ngIf="display"
+  [@enterAnimation]
+>
+  <mat-sidenav mode="side" closed>Sidenav content</mat-sidenav>
+  <mat-sidenav-content>
+    <div class="sidenav-content">
+      <div class="sidenav-button" (click)="showTopBar()">
+        <span class="menuItem-label"
+          ><mat-icon style="vertical-align: middle">
+            arrow_back
+          </mat-icon></span
+        >
+      </div>
+      <div
+        class="sidenav-button"
+        *ngFor="let menuItem of menuItems"
+        [routerLink]="menuItem?.route"
+      >
+        <!-- <button mat-button >
+          <mat-icon>{{ menuItem?.icon }}</mat-icon
+          >{{ menuItem?.label }}
+        </button> -->
+        <span class="menuItem-label"
+          ><mat-icon style="vertical-align: middle">{{
+            menuItem?.icon
+          }}</mat-icon
+          >{{ menuItem?.label }}</span
+        >
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
