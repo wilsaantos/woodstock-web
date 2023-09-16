@@ -48,6 +48,7 @@ const routes: Routes = [
   {
     path: '**',
     redirectTo: 'dahsboard',
+    pathMatch: 'full',
   },
 ];
 
